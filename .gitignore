@@ -1,0 +1,43 @@
+# Git Ignore File
+# Ignore build results
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.so
+*.dylib
+
+# Ignore IDE files
+.vs/
+.vscode/
+*.swp
+*.swo
+*~
+*.user
+*.suo
+.DS_Store
+Thumbs.db
+
+# Ignore Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Ignore compiled files
+dist/
+build/
+.next/
+
+# Ignore IDE specific files
+.idea/
+*.iml
+
+# Ignore package-lock and yarn-lock (optional, based on preference)
+# package-lock.json
+# yarn.lock

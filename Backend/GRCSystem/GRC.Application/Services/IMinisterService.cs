@@ -1,5 +1,7 @@
 using GRC.Application.DTOs;
 
+
+
 namespace GRC.Application.Services
 {
     public interface IMinisterService
@@ -13,3 +15,5 @@ namespace GRC.Application.Services
         Task<List<MinisterDto>> SearchMinistersAsync(string nameAr, int? ministryId, DateTime? fromDate, DateTime? toDate);
     }
 }
+
+

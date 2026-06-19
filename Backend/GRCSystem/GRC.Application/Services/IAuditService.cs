@@ -1,3 +1,5 @@
+using GRC.Application.DTOs;
+
 namespace GRC.Application.Services
 {
     public interface IAuditService

@@ -1,3 +1,5 @@
+using GRC.Application.Services;
+using GRC.Application.Services.Implementations;
 using GRC.Infrastructure.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -84,6 +86,8 @@ builder.Services.AddSwaggerGen(c =>
 
 // AutoMapper
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 var app = builder.Build();
 

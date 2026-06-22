@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace GRC.Domain.Entities
 {
     public class ComplianceBook
     {
+        [Key]
         public int Id { get; set; }
         public string Code { get; set; }
         public string NameAr { get; set; }
@@ -24,6 +26,7 @@ namespace GRC.Domain.Entities
 
     public class ComplianceChapter
     {
+        [Key]
         public int Id { get; set; }
         public int BookId { get; set; }
         public string Code { get; set; }
@@ -38,6 +41,7 @@ namespace GRC.Domain.Entities
 
     public class ComplianceArticle
     {
+        [Key]
         public int Id { get; set; }
         public int? BookId { get; set; }
         public int? ChapterId { get; set; }
@@ -58,6 +62,7 @@ namespace GRC.Domain.Entities
 
     public class Department
     {
+        [Key]
         public int Id { get; set; }
         public string NameAr { get; set; }
         public string NameEn { get; set; }
@@ -70,6 +75,7 @@ namespace GRC.Domain.Entities
 
     public class ArticleDepartment
     {
+        [Key]
         public int Id { get; set; }
         public int ArticleId { get; set; }
         public int DepartmentId { get; set; }
@@ -81,6 +87,7 @@ namespace GRC.Domain.Entities
 
     public class Attachments
     {
+        [Key]
         public int Id { get; set; }
         public int? ArticleId { get; set; }
         public int? ViolationId { get; set; }

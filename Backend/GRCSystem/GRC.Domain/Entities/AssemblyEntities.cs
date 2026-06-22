@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,7 @@ namespace GRC.Domain.Entities
 
     public class NationalAssemblyMember
     {
+        [Key]
         public int Id { get; set; }
         public string FullNameAr { get; set; }
         public string FullNameEn { get; set; }
@@ -53,6 +55,7 @@ namespace GRC.Domain.Entities
 
     public class MemberTerm
     {
+        [Key]
         public int Id { get; set; }
         public int MemberId { get; set; }
         public int TermId { get; set; }

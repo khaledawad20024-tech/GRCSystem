@@ -1,26 +1,10 @@
 import { Slot } from "expo-router";
-import { View } from "react-native";
-import { LanguageProvider, useLanguage } from "../contexts/LanguageContext";
-
-function LayoutContent() {
-  const { isRTL } = useLanguage();
-
-  return (
-    <View
-      style={{
-        flex: 1,
-        direction: isRTL ? "rtl" : "ltr",
-      }}
-    >
-      <Slot />
-    </View>
-  );
-}
+import { LanguageProvider } from "../contexts/LanguageContext";
 
 export default function RootLayout() {
   return (
     <LanguageProvider>
-      <LayoutContent />
+      <Slot />
     </LanguageProvider>
   );
 }
